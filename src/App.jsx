@@ -176,10 +176,6 @@ function App() {
       ),
     },
     {
-      path: "/events",
-      element: authenticated ? <></> : <></>,
-    },
-    {
       path: "/backend_main",
       element: (
         <>
