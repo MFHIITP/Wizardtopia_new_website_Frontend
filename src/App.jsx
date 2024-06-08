@@ -148,7 +148,7 @@ function App() {
           <Message Popup={popups.secondPopup} />
           <Houses Popup={popups.thirdPopup} />
           <Faq Popup={popups.fourthPopup} />
-          <Footer Popup={popups.fourthPopup} />
+{/*           <Footer Popup={popups.fourthPopup} /> */}
         </>
       ) : (
         <>
