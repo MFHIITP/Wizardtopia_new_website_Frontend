@@ -4,7 +4,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = (props) => {
   return (
-    <div className={`${props.Popup == false ? "none" : "anime"} py-8 px-4 sm:px-8 md:px-16`}>
+    <div className={`${props.Popup == false ? "none" : "anime"} py-8 px-4 sm:px-8 md:px-10`}>
       <div className="rounded-lg my-8">
         <div className="flex flex-col text-white bg-gray-900 rounded-lg p-6 sm:p-8 md:p-10">
           <div className="m-auto font-bold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-8 font-serif">Contact Us</div>
