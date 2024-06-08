@@ -5,6 +5,7 @@ function Posts(props) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [posts, setPosts] = useState([]);
+  const [val, setVal] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,12 +37,17 @@ function Posts(props) {
       });
       const data = await response.json();
       setPosts(data);
-      if(scroll.current){
-        scroll.current.scrollTop = scroll.current.scrollHeight;
-      }
+      setVal(true)
     };
     fetchData();
-  }, []);
+  }, [posts]);
+
+  useEffect(() => {
+    if(scroll.current){
+      scroll.current.scrollTop = scroll.current.scrollHeight;
+    }
+  }, [val])
+  
 
 
   return (
