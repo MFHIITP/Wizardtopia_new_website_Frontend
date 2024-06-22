@@ -26,6 +26,20 @@ function Login() {
         const data = await response.json();
         document.cookie = `Cookie=${data.token}; path=/; domain=${window.location.hostname}; secure=true; sameSite=none;`;
         document.cookie = `ProfileInfo=${encodeURIComponent("j:" + JSON.stringify(data.profileinfo))}; path=/; domain=${window.location.hostname}; secure=true; sameSite=none;`;
+        await fetch('https://wizardtopia-backend.onrender.com/backend_logging', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            name: data.profileinfo.name, 
+            stats: 'live',
+            intime: new Date().toString(),
+            outtime: '_'
+          }),
+          credentials: "include",
+        })
         window.location.href = "/";
       } else {
         const ans = await response.text();
