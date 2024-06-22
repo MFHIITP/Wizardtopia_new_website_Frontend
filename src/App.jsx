@@ -25,6 +25,7 @@ import Movie5 from "./Components/MoviesComponent/Movie5";
 import Movie6 from "./Components/MoviesComponent/Movie6";
 import Movie7 from "./Components/MoviesComponent/Movie7";
 import Movie8 from "./Components/MoviesComponent/Movie8";
+import Headmaster_Content from "./Components/Headmaster_Content";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -176,7 +177,7 @@ function App() {
       ),
     },
     {
-      path: "/backend_main",
+      path: "/backend_main", 
       element: (
         <>
           <Register />
@@ -228,6 +229,10 @@ function App() {
       ) : (
         <></>
       ),
+    },
+    {
+      path: '/headmaster',
+      element: <><Headmaster_Content mail = {myemail}/></>
     },
     {
       path: "/event",
@@ -282,7 +287,7 @@ function App() {
         }`}
       >
         <div className={`fixed top-0 left-0 z-40 w-full`}>
-          <Index name={name} />
+          <Index name={name} myemail={myemail} />
         </div>
       </div>
       <RouterProvider router={router_val} />
