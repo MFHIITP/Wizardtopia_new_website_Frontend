@@ -75,6 +75,13 @@ function Profile() {
         function deleteCookies(cookieNames) {
             document.cookie = `${cookieNames}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
         }
+        const res = await fetch('https://wizardtopia-backend.onrender.com/backend_signedout', {
+            method: 'POST',
+            headers: {
+                "Content-Type": 'application/json',
+            },
+            body: JSON.stringify({email: email})
+        })
         const response = await fetch('https://wizardtopia-backend.onrender.com/backend_remove', {
             method: 'POST',
             headers: {
@@ -82,7 +89,7 @@ function Profile() {
             },
             body: JSON.stringify({ email: email })
         });
-        if (response.status === 200) {
+        if (response.status === 200 && res.status === 200) {
             deleteCookies(' Cookie')
             deleteCookies('ProfileInfo')
             window.location.href = '/backend_login';
