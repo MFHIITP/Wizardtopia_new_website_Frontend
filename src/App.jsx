@@ -26,6 +26,7 @@ import Movie6 from "./Components/MoviesComponent/Movie6";
 import Movie7 from "./Components/MoviesComponent/Movie7";
 import Movie8 from "./Components/MoviesComponent/Movie8";
 import Headmaster_Content from "./Components/Headmaster_Content";
+import Watsapp from "./Components/Watsapp";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -276,7 +277,7 @@ function App() {
     },
   ]);
   return (
-    <>
+    <div className="relative">
       <div
         className={`h-12 ${
           authenticated == false ||
@@ -290,8 +291,9 @@ function App() {
           <Index name={name} myemail={myemail} />
         </div>
       </div>
+      <Watsapp registered = {authenticated}/>
       <RouterProvider router={router_val} />
-    </>
+    </div>
   );
 }
 
