@@ -135,14 +135,14 @@ function Login() {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 opacity-80 font-mono"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-xl font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 opacity-80 font-mono"
               >
                 Welcome To Hogwarts
               </button>
             </div>
           </form>
           <div className="flex mt-4">
-            <div className="text-2xl text-white font-mono">
+            <div className="text-xl text-white font-mono">
               Not a Part of Us? Well Get In!
             </div>
             <div className="">
