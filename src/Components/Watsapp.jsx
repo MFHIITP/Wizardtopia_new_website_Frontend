@@ -6,7 +6,7 @@ function Watsapp(props) {
       <div className={`${(props.registered === false) ? "hidden" : "none"}`}>
         <a href="https://chat.whatsapp.com/H7shXB5TJtK2XcUbvRoujO" className="flex gap-8">
           <div className="flex items-center font-extralight">
-            Join our Official Watsapp Group
+            Join our Official Whatsapp Group
           </div>
           <div className="text-xs font-extralight">
             <img
@@ -15,7 +15,7 @@ function Watsapp(props) {
               height={30}
               width={30}
             />
-            Watsapp
+            Whatsapp
           </div>
         </a>
       </div>
