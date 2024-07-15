@@ -6,6 +6,7 @@ import image2 from "../../Images/60957a3d34af8d001859c0ff.webp";
 import image3 from "../../Images/71Xi7Y6LSRL.jpg";
 import image4 from "../../Images/harry-potter-background-kbrb6vlqr8ych08x.jpg";
 import image5 from "../../Images/HogwartsCastle_WB_F5_HogwartsCastleIllustration_Illust_080615_Land.jpg";
+import Anime from './Anime';
 const images = [ image4, image1, image2, image3, image5 ];
 
 function Part1(props) {
@@ -41,7 +42,7 @@ function Part1(props) {
         Welcome to Wizardtopia
       </div>
       <div className='absolute top-[50%] left-auto font-serif text-white font-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'>
-        Jadavpur University Wizarding Club
+        <Anime/>
       </div>
     </div>
   );
