@@ -39,7 +39,10 @@ function Register() {
             });
 
             if (response.status === 200) {
-                window.location.href = '/backend_login';
+                const value = await response.json();
+                localStorage.setItem('registrationData', JSON.stringify(value.data));
+                console.log("Set data");
+                window.location.href = '/otpverify';
             } else {
                 const errorMessage = await response.text();
                 setMessage(errorMessage);
