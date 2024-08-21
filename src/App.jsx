@@ -27,6 +27,7 @@ import Movie7 from "./Components/MoviesComponent/Movie7";
 import Movie8 from "./Components/MoviesComponent/Movie8";
 import Headmaster_Content from "./Components/Headmaster_Content";
 import Watsapp from "./Components/Watsapp";
+import Otpverify from "./Components/Otpverify";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -68,7 +69,7 @@ function App() {
         }
         let val = value.split(";");
         for (let i = 0; i < val.length; i++) {
-          let tokenCookie = val[i];
+          let tokenCookie = val[i]; 
           if (tokenCookie.startsWith(` ${name}=`)) {
             let token = tokenCookie.substring(8);
             return token;
@@ -181,7 +182,7 @@ function App() {
       path: "/backend_main", 
       element: (
         <>
-          <Register />
+          <Register/>
         </>
       ),
     },
@@ -230,6 +231,10 @@ function App() {
       ) : (
         <></>
       ),
+    },
+    {
+      path: '/otpverify',
+      element: <><Otpverify/></>
     },
     {
       path: '/headmaster',
