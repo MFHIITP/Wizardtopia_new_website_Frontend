@@ -9,7 +9,7 @@ function QueryBox() {
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3003/api/sendquery", {
+      const response = await fetch("https://wizardtopia-backend.onrender.com/api/sendquery", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
