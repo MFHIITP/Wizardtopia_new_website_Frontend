@@ -28,6 +28,7 @@ import Movie8 from "./Components/MoviesComponent/Movie8";
 import Headmaster_Content from "./Components/Headmaster_Content";
 import Watsapp from "./Components/Watsapp";
 import Otpverify from "./Components/Otpverify";
+import QueryBox from "./Components/Query";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -151,6 +152,7 @@ function App() {
           <Message Popup={popups.secondPopup} />
           <Houses Popup={popups.thirdPopup} />
           <Faq Popup={popups.fourthPopup} />
+          <QueryBox/>
           <Footer Popup={popups.fourthPopup} />
         </>
       ) : (
